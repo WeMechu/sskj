@@ -1024,13 +1024,46 @@ nav.main-menu {
   width: 100%;
   padding: 40px 40px 40px 40px;
 }
-.header-scrolled-top {
-  animation: increasepadding 1s;
-}
+
 .header-scrolled {
   background-image: linear-gradient(to right, #ffec8780, #eec668);
   padding: 10px;
-  animation: reducepadding 1s;
+}
+@media (max-width: 700px) {
+  .header-scrolled .logo{
+    animation: reducepaddingmobile 1s;
+    padding-bottom: 0;
+  }
+  .header-scrolled-top .logo{
+    animation: increasepaddingmobile 1s;
+    padding-bottom: 25px;
+  }
+}
+  @media (min-width: 700px) {
+  .header-scrolled {
+    animation: reducepadding 1s;
+  }
+
+  .header-scrolled-top {
+    animation: increasepadding 1s;
+  }
+
+}
+@keyframes reducepaddingmobile {
+  from {
+    padding-bottom: 25px;
+  }
+  to {
+    padding-bottom: 0;
+  }
+}
+@keyframes increasepaddingmobile {
+  from {
+    padding-bottom: 0;
+  }
+  to {
+    padding-bottom: 25px;
+  }
 }
 @keyframes reducepadding {
   from {
