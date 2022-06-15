@@ -12,25 +12,25 @@
        <div class="row">
           <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
              <div class="contact">
-                <form>
+                <!-- <form> -->
                    <div class="row">
                       <div class="col-sm-12">
-                         <input class="contactus" placeholder="Name" type="text" name="Name">
+                         <input [(ngModel)]="customerName" class="contactus" placeholder="Name" type="text" name="Name">
                       </div>
                       <div class="col-sm-12">
-                         <input class="contactus" placeholder="Phone Number" type="text" name="Phone Number">
+                         <input [(ngModel)]="customerPhoneNumber" class="contactus" placeholder="Phone Number" type="text" name="Phone Number">
                       </div>
                       <div class="col-sm-12">
-                         <input class="contactus" placeholder="Email" type="text" name="Email">
+                         <input [(ngModel)]="customerEmail" class="contactus" placeholder="Email" type="text" name="Email">
                       </div>
                       <div class="col-sm-12">
-                         <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                         <textarea [(ngModel)]="customerMessage" class="textarea" placeholder="Message" type="text" name="Message"></textarea>
                       </div>
                       <div class="col-sm-12">
-                         <button class="send">Send</button>
+                         <button class="send" (click)="sendMessage()">Send</button>
                       </div>
                    </div>
-                </form>
+                <!-- </form> -->
              </div>
           </div>
           <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
