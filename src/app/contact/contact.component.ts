@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
 
   sendMessage() {
     const webHook =
-      'https://hooks.slack.com/services/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';
+      'https://hooks.slack.com/services/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';
     const message = {
       attachments: [
         {
